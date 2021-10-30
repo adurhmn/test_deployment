@@ -75,7 +75,7 @@ body {
 
 .daysbetweendates__container {
   height: 75rem;
-  width: 50rem;
+  width: 55rem;
   border: 4px solid var(--theme-red);
   border-left: 0;
   border-bottom-right-radius: 30px;
@@ -151,7 +151,7 @@ body {
 
 .datepastdays__container {
   height: 75rem;
-  width: 50rem;
+  width: 55rem;
   border: 4px solid var(--theme-blue);
   border-right: 0;
   border-bottom-left-radius: 30px;
