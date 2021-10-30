@@ -91,7 +91,7 @@ body {
   margin-top: 10rem;
 }
 
-.daysbetweendates__container__start-date-container, .daysbetweendates__container__end-date-container {
+.daysbetweendates__container__start-date-container, .daysbetweendates__container__end-date-container, .datepastdays__container__start-date-container, .datepastdays__container__days-to-pass-container {
   width: 90%;
   margin: 0 auto;
 }
@@ -178,6 +178,7 @@ body {
   border-color: var(--theme-blue);
 }
 
+/*
 .datepastdays__container {
   padding-right: 2rem;
 }
@@ -185,3 +186,4 @@ body {
 .datepastdays__container__result-container {
   margin-left: 4rem;
 }
+*/
