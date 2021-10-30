@@ -1,0 +1,145 @@
+/* Css approach- HTML FLOW | Class naming - div orient */
+/* Light Red : #F38181 */
+/* Light Blue : #95E1D3 */
+/* Light Yellow : #FCE38A */
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --theme-red: #F38181;
+  --theme-blue: #95E1D3;
+  --theme-yellow: #FCE38A;
+  font-size: 16px;
+}
+
+body {
+
+}
+
+.header {
+  background-color: var(--theme-yellow);
+  height: 15rem;
+  padding: 	0.625rem;
+  padding-top: 5rem;
+  position: relative;
+}
+
+.header .primary-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 5.2rem;
+  text-align: center;
+}
+
+.header .firstnav, .header .secondnav {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline;
+}
+
+.header .firstnav {
+  background-color: rgba(243, 129, 129, 0.5);
+  position: absolute;
+  left: 3.3rem;
+  top: 14rem;
+}
+
+.header .secondnav {
+  background-color: rgba(149, 225, 211, 0.5);
+  position: absolute;
+  right: 1.5em;
+  top: 14rem;
+}
+
+.daysbetweendates {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.daysbetweendates__red-horizontal-marker {
+  /* height: 430px; */
+  /* width: 40px; */
+  height: 85rem;
+  width: 4rem;
+  background-color: var(--theme-red);
+  border: 4px solid var(--theme-red);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  display: inline-block;
+}
+
+.daysbetweendates__container {
+  height: 85rem;
+  width: 50rem;
+  border: 4px solid var(--theme-red);
+  border-left: 0;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.daysbetweendates__container__flexbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8.5rem;
+  margin-top: 13rem;
+}
+
+.daysbetweendates__container__start-date-container, .daysbetweendates__container__end-date-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.start-date-label, .end-date-label {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 3.5rem;
+}
+
+.start-date-container__flexbox, .end-date-container__flexbox {
+  float: right;
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.start-day, .start-month, .start-year, .end-day, .end-month, .end-year {
+  display: inline-block;
+  height: 5rem;
+  width: 7.5rem;
+  border: 3px solid var(--theme-red);
+  border-radius: 10px;
+}
+
+.daysbetweendates__container__result-container {
+  padding: 2rem;
+  background-color: rgba(89, 88, 88, 0.2);
+  border: 2px solid grey;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 40rem;
+  margin: 3rem auto 0 auto;
+}
+
+.daysbetweendates__container .find-btn {
+  padding: 2rem 3rem;
+  width: 12rem;
+  margin: 0 auto;
+  font-size: 3rem;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
