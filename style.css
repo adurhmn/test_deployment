@@ -178,6 +178,10 @@ body {
   border-color: var(--theme-blue);
 }
 
+.datepastdays__container__result-container {
+  width: 28rem;
+}
+
 /*
 .datepastdays__container {
   padding-right: 2rem;
