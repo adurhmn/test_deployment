@@ -63,10 +63,8 @@ body {
   text-align: center;
 }
 
-.daysbetweendates__red-horizontal-marker {
-  /* height: 430px; */
-  /* width: 40px; */
-  height: 85rem;
+.daysbetweendates__horizontal-marker {
+  height: 75rem;
   width: 4rem;
   background-color: var(--theme-red);
   border: 4px solid var(--theme-red);
@@ -76,7 +74,7 @@ body {
 }
 
 .daysbetweendates__container {
-  height: 85rem;
+  height: 75rem;
   width: 50rem;
   border: 4px solid var(--theme-red);
   border-left: 0;
@@ -86,11 +84,11 @@ body {
   overflow: hidden;
 }
 
-.daysbetweendates__container__flexbox {
+.daysbetweendates__container__flexbox, .datepastdays__container__flexbox {
   display: flex;
   flex-direction: column;
   gap: 8.5rem;
-  margin-top: 13rem;
+  margin-top: 10rem;
 }
 
 .daysbetweendates__container__start-date-container, .daysbetweendates__container__end-date-container {
@@ -98,28 +96,30 @@ body {
   margin: 0 auto;
 }
 
-.start-date-label, .end-date-label {
+.start-date-label, .end-date-label, .days-to-pass-label {
   display: inline-block;
   font-family: 'Lato', sans-serif;
   font-size: 3.5rem;
 }
 
-.start-date-container__flexbox, .end-date-container__flexbox {
+.start-date-container__flexbox, .end-date-container__flexbox, .days-to-pass {
   float: right;
   display: flex;
   gap: 0.9rem;
   align-items: center;
 }
 
-.start-day, .start-month, .start-year, .end-day, .end-month, .end-year {
+.start-day, .start-month, .start-year, .end-day, .end-month, .end-year, .days-to-pass {
   display: inline-block;
   height: 5rem;
   width: 7.5rem;
   border: 3px solid var(--theme-red);
   border-radius: 10px;
+  font-size: 2.5rem;
+  padding-left: 1rem;
 }
 
-.daysbetweendates__container__result-container {
+.daysbetweendates__container__result-container, .datepastdays__container__result-container {
   padding: 2rem;
   background-color: rgba(89, 88, 88, 0.2);
   border: 2px solid grey;
@@ -135,11 +135,53 @@ body {
   margin: 3rem auto 0 auto;
 }
 
-.daysbetweendates__container .find-btn {
+.find-btn {
   padding: 2rem 3rem;
   width: 12rem;
   margin: 0 auto;
   font-size: 3rem;
   border: 2px solid grey;
   border-radius: 10px;
+}
+
+.datepastdays {
+  margin: 120px 0;
+  text-align: center;
+}
+
+.datepastdays__container {
+  height: 75rem;
+  width: 50rem;
+  border: 4px solid var(--theme-blue);
+  border-right: 0;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.datepastdays__horizontal-marker {
+  height: 75rem;
+  width: 4rem;
+  background-color: var(--theme-blue);
+  border: 4px solid var(--theme-blue);
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  display: inline-block;
+}
+
+.datepastdays .days-to-pass {
+  width: 24rem;
+}
+
+.datepastdays .start-day, .datepastdays .start-month, .datepastdays .start-year, .datepastdays .days-to-pass {
+  border-color: var(--theme-blue);
+}
+
+.datepastdays__container {
+  padding-right: 2rem;
+}
+
+.datepastdays__container__result-container {
+  margin-left: 4rem;
 }
