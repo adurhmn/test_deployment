@@ -61,8 +61,8 @@
 }
 
 .daysbetweendates__connect-design {
-  width: 15rem;
-  height: 55rem;
+  width: 40vw;
+  height: 60rem;
   border: 1rem solid rgba(243, 129, 129, 0.4);
   border-top: 0;
   border-right: 0;
@@ -73,7 +73,7 @@
 }
 
 .daysbetweendates__horizontal-marker {
-  height: 75rem;
+  height: 80rem;
   width: 4rem;
   background-color: var(--theme-red);
   border: 4px solid var(--theme-red);
@@ -84,8 +84,8 @@
 
 .daysbetweendates__container {
   background-color: white;
-  height: 75rem;
-  width: 53rem;
+  height: 80rem;
+  width: 54rem;
   border: 4px solid var(--theme-red);
   border-left: 0;
   border-bottom-right-radius: 30px;
@@ -176,15 +176,15 @@
   position: absolute;
   top: 18rem;
   right: 3.3rem;
-  width: 10rem;
+  width: 40vw;
   height: 140rem;
   z-index: -1;
 }
 
 .datepastdays__container {
   background-color: white;
-  height: 75rem;
-  width: 53rem;
+  height: 80rem;
+  width: 54rem;
   border: 4px solid var(--theme-blue);
   border-right: 0;
   border-bottom-left-radius: 30px;
@@ -194,7 +194,7 @@
 }
 
 .datepastdays__horizontal-marker {
-  height: 75rem;
+  height: 80rem;
   width: 4rem;
   background-color: var(--theme-blue);
   border: 4px solid var(--theme-blue);
@@ -247,12 +247,8 @@
     margin: 0;
   }
 
-  .daysbetweendates__connect-design, .datepastdays__connect-design {
-    width: 40vw;
-  }
-
   .datepastdays__connect-design {
-    height: 50rem;
+    height: 60rem;
   }
 
 
