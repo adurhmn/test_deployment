@@ -14,10 +14,7 @@
   --theme-blue: #95E1D3;
   --theme-yellow: #FCE38A;
   font-size: 13px;
-}
-
-body {
-
+  font-family: 'Lato', sans-serif;
 }
 
 .header {
@@ -65,13 +62,14 @@ body {
 
 .daysbetweendates__connect-design {
   width: 15rem;
-  height: 50rem;
-  background-color: rgba(243, 129, 129, 0.4);
+  height: 55rem;
+  border: 1rem solid rgba(243, 129, 129, 0.4);
+  border-top: 0;
+  border-right: 0;
   position: absolute;
   top: 18rem;
   left: 3.3rem;
   z-index: -1;
-  clip-path: polygon(0 0, 1rem 0, 1rem 49rem, 6rem 49rem, 6rem 50rem, 0 50rem)
 }
 
 .daysbetweendates__horizontal-marker {
@@ -85,6 +83,7 @@ body {
 }
 
 .daysbetweendates__container {
+  background-color: white;
   height: 75rem;
   width: 53rem;
   border: 4px solid var(--theme-red);
@@ -123,11 +122,15 @@ body {
 .start-day, .start-month, .start-year, .end-day, .end-month, .end-year, .days-to-pass {
   display: inline-block;
   height: 5rem;
-  width: 7.5rem;
+  width: 6rem;
   border: 3px solid var(--theme-red);
   border-radius: 10px;
   font-size: 2.5rem;
   padding-left: 1rem;
+}
+
+.start-year, .end-year {
+  width: 10rem;
 }
 
 .daysbetweendates__container__result-container, .datepastdays__container__result-container {
@@ -149,10 +152,16 @@ body {
 .find-btn {
   padding: 2rem 3rem;
   width: 12rem;
-  margin: 0 auto;
+  margin: 3rem auto 0 auto;
   font-size: 3rem;
   border: 2px solid grey;
   border-radius: 10px;
+}
+
+.warning {
+  color: red;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .datepastdays {
@@ -161,17 +170,19 @@ body {
 }
 
 .datepastdays__connect-design {
+  border: 1rem solid rgba(149, 225, 211, 0.4);
+  border-top: 0;
+  border-left: 0;
   position: absolute;
   top: 18rem;
-  right: 2.3rem;
+  right: 3.3rem;
   width: 10rem;
   height: 140rem;
-  background-color: rgba(149, 225, 211, 0.4);
   z-index: -1;
-  clip-path: polygon(9rem 0, 10rem 0, 10rem 140rem, 0 140rem, 0 139rem, 9rem 139rem)
 }
 
 .datepastdays__container {
+  background-color: white;
   height: 75rem;
   width: 53rem;
   border: 4px solid var(--theme-blue);
@@ -202,4 +213,47 @@ body {
 
 .datepastdays__container__result-container {
   width: 28rem;
+}
+
+
+@media only screen and (min-width: 1000px),
+            screen and (orientation: landscape){
+  :root {
+    font-size: 5.5px;
+  }
+
+  .header {
+    height: 20rem;
+  }
+
+  .header .primary-title {
+    font-size: 7rem;
+  }
+
+  .header .firstnav, .header .secondnav {
+    top: 17rem;
+  }
+
+
+  .section-container {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .daysbetweendates, .datepastdays {
+    margin: 0;
+  }
+
+  .daysbetweendates__connect-design, .datepastdays__connect-design {
+    width: 40vw;
+  }
+
+  .datepastdays__connect-design {
+    height: 50rem;
+  }
+
+
 }
