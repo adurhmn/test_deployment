@@ -406,8 +406,12 @@ $('.daysbetweendates .find-btn').on('click', function () {
     let validation = new validateInputDates({startDay: startDay, startMonth: startMonth, startYear: startYear, endDay: endDay, endMonth: endMonth, endYear: endYear, validationCase: '2'})
     validation = validation.validateCase2()
     if (validation[0]) {
+      $('.daysbetweendates__container__result-container').addClass('clicked')
       const dateCalc = new findDaysBetweenDates(startDay, startMonth, startYear, endDay, endMonth, endYear)
       $('.daysbetweendates .result').text(`${dateCalc.calculateDaysBetweenDates()} Days`)
+      setTimeout(function () {
+        $('.daysbetweendates__container__result-container').removeClass('clicked')
+      }, 100)
     } else {
       $('.daysbetweendates .warning').text(validation[1])
     }
