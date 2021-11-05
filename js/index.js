@@ -411,7 +411,7 @@ $('.daysbetweendates .find-btn').on('click', function () {
       $('.daysbetweendates .result').text(`${dateCalc.calculateDaysBetweenDates()} Days`)
       setTimeout(function () {
         $('.daysbetweendates__container__result-container').removeClass('clicked')
-      }, 100)
+      }, 130)
     } else {
       $('.daysbetweendates .warning').text(validation[1])
     }
@@ -447,8 +447,12 @@ $('.datepastdays .find-btn').on('click', function () {
     var validate = new validateInputDates({startDay: startDay, startMonth: startMonth, startYear: startYear, validationCase: '1'})
     validate = validate.validateCase1()
     if (validate[0]) {
+      $('.datepastdays__container__result-container').addClass('clicked')
       const dateCalc = new findDatePastDays(startDay, startMonth, startYear, daysToPass)
       $('.datepastdays .result').text(dateCalc.calculateDate())
+      setTimeout(function () {
+        $('.datepastdays__container__result-container').removeClass('clicked')
+      }, 130)
     } else {
       $('.datepastdays .warning').text(validate[1])
     }
