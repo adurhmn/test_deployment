@@ -1,313 +1,108 @@
-/* Light Red : #F38181 */
-/* Light Blue : #95E1D3 */
-/* Light Yellow : #FCE38A */
-
-
 * {
-  padding: 0;
   margin: 0;
-}
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
 
-:root {
-  --theme-red: #F38181;
-  --theme-blue: #95E1D3;
-  --theme-yellow: #FCE38A;
-  font-size: 5px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-}
+html {
+  font-size: 62.5%; }
+
+hr {
+  height: 0;
+  border: 0;
+  border-top: 3px solid royalblue;
+  width: 70%;
+  margin: 0 auto; }
 
 .header {
-  background-color: var(--theme-yellow);
-  height: 15rem;
-  padding: 	0.625rem;
-  padding-top: 5rem;
+  height: 5rem;
+  background-image: linear-gradient(315deg, #2234ae 0%, #191714 74%);
   position: relative;
-}
+  overflow: hidden; }
 
-.header .primary-title {
+.logo {
+  color: white;
   font-family: 'Lato', sans-serif;
-  font-weight: 900;
-  font-size: 5.5rem;
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-30%, -50%); }
+
+.logo--big {
+  font-size: 2.7rem; }
+  .logo--big::after {
+    content: '';
+    background-color: white;
+    height: 3rem;
+    width: 3rem;
+    display: inline-block;
+    border-radius: 10rem;
+    position: absolute;
+    left: -3.6rem;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.category__item {
+  display: block;
+  background-color: gainsboro;
+  text-decoration: none;
+  color: black;
   text-align: center;
-}
-
-.header .firstnav, .header .secondnav {
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
-  font-size: 2.5rem;
-  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  text-transform: capitalize;
+  border: .3rem solid black;
   border-radius: 5px;
-  display: inline;
-  position: absolute;
-}
+  width: 20rem;
+  padding: 1.5rem;
+  margin: 4.5rem auto 0 auto; }
 
-.header .firstnav {
-  background-color: rgba(243, 129, 129, 0.5);
-  left: 3.3rem;
-  top: 14rem;
-}
+.todays-quotes {
+  margin: 5rem 0; }
+  .todays-quotes__heading {
+    font-size: 2.4rem;
+    text-align: center; }
 
-.header .firstnav:hover::after,
-.header .firstnav:focus::after {
-  content: 'Finds the no.of.days between the given dates. The start and end dates are also included';
-  font-size: 1.7rem;
-  display: inline-block;
-  position: absolute;
-  left: 5rem;
-  top: 7rem;
-  background-color: rgba(243, 129, 129, 0.2);
-  padding: 8px;
-  width: 120px;
-  border: 1px solid rgba(243, 129, 129, 0.5);
-  border-radius: 10px;
-  text-align: center;
-}
-
-.header .secondnav {
-  background-color: rgba(149, 225, 211, 0.5);
-  right: 2.3rem;
-  top: 14rem;
-}
-
-.header .secondnav:hover::after,
-.header .secondnav:focus::after {
-  content: 'Finds the date after/before the given days(days-to-pass) from the start date';
-  font-size: 1.7rem;
-  display: inline-block;
-  position: absolute;
-  right: 5rem;
-  top: 7rem;
-  background-color: rgba(149, 225, 211, 0.2);
-  padding: 8px;
-  width: 120px;
-  border: 1px solid rgba(149, 225, 211, 0.5);
-  border-radius: 10px;
-  text-align: center;
-}
-
-.daysbetweendates, .datepastdays {
-  margin-top: 120px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.datepastdays {
-  margin-bottom: 120px;
-}
-
-.daysbetweendates__connect-design {
-  width: 40vw;
-  height: 60rem;
-  border: 1rem solid rgba(243, 129, 129, 0.4);
-  border-top: 0;
-  border-right: 0;
-  position: absolute;
-  top: 18rem;
-  left: 3.3rem;
-  z-index: -1;
-}
-
-.daysbetweendates__horizontal-marker {
-  height: 80rem;
-  width: 4rem;
-  background-color: var(--theme-red);
-  border: 4px solid var(--theme-red);
-  border-bottom-left-radius: 30px;
-  border-top-left-radius: 30px;
-  display: inline-block;
-}
-
-.daysbetweendates__container {
-  background-color: white;
-  height: 80rem;
-  width: 54rem;
-  border: 4px solid var(--theme-red);
-  border-left: 0;
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  display: inline-block;
-  overflow: hidden;
-  box-shadow: 0 0 10px 2px var(--theme-red);
-}
-
-.daysbetweendates__container__flexbox, .datepastdays__container__flexbox {
+.todays-quotes__flexbox {
   display: flex;
   flex-direction: column;
-  gap: 8.5rem;
-  margin-top: 10rem;
-}
-
-.daysbetweendates__container__start-date-container, .daysbetweendates__container__end-date-container, .datepastdays__container__start-date-container, .datepastdays__container__days-to-pass-container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.start-date-label, .end-date-label, .days-to-pass-label {
-  display: inline-block;
-  font-family: 'Lato', sans-serif;
-  font-size: 3.5rem;
-}
-
-.start-date-container__flexbox, .end-date-container__flexbox, .days-to-pass {
-  float: right;
-  display: flex;
-  gap: 0.9rem;
-  align-items: center;
-}
-
-
-.start-day, .start-month, .start-year, .end-day, .end-month, .end-year, .days-to-pass {
-  display: inline-block;
-  height: 5rem;
-  width: 6rem;
-  border: 3px solid var(--theme-red);
-  border-radius: 10px;
-  font-size: 3rem;
-  padding-left: 1rem;
-}
-
-.start-year, .end-year {
-  width: 10rem;
-}
-
-.datepastdays .days-to-pass {
-  width: 24rem;
-}
-
-.datepastdays .start-day, .datepastdays .start-month, .datepastdays .start-year, .datepastdays .days-to-pass {
-  border-color: var(--theme-blue);
-}
-
-.daysbetweendates__container__result-container, .datepastdays__container__result-container {
-  padding: 2rem;
-  background-color: rgba(89, 88, 88, 0.2);
-  border: 2px solid grey;
-  border-radius: 10px;
-  font-size: 3rem;
-  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  width: 45rem;
-  margin: 3rem auto 0 auto;
-}
+  gap: 3rem;
+  margin-top: 3rem; }
 
-.datepastdays__container__result-container {
-  width: 28rem;
-}
+.quote-box {
+  width: 30rem;
+  padding: 2rem 2rem 6rem;
+  background-color: #c5d1f6;
+  position: relative;
+  border-radius: 5px; }
+  .quote-box__quote {
+    font-size: 1.5rem; }
+  .quote-box__mentor {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem; }
+  .quote-box__section {
+    font-size: 1.2rem;
+    position: absolute;
+    background-color: white;
+    padding: 1rem;
+    bottom: 0;
+    left: 0; }
 
-.find-btn {
-  padding: 2rem 3rem;
-  width: 12rem;
-  margin: 3rem auto 0 auto;
-  font-size: 3rem;
-  border: 2px solid grey;
-  border-radius: 10px;
-}
-
-.find-btn:hover {
-  box-shadow: 0 0 3px grey;
-}
-
-.find-btn:active {
-  transform: translateY(1.5px);
-}
-
-.clicked {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.warning {
-  color: red;
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.datepastdays__connect-design {
-  border: 1rem solid rgba(149, 225, 211, 0.4);
-  border-top: 0;
-  border-left: 0;
-  position: absolute;
-  top: 18rem;
-  right: 3.3rem;
-  width: 40vw;
-  height: 170rem;
-  z-index: -1;
-}
-
-.datepastdays__horizontal-marker {
-  height: 80rem;
-  width: 4rem;
-  background-color: var(--theme-blue);
-  border: 4px solid var(--theme-blue);
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  display: inline-block;
-}
-
-.datepastdays__container {
-  background-color: white;
-  height: 80rem;
-  width: 54rem;
-  border: 4px solid var(--theme-blue);
-  border-right: 0;
-  border-bottom-left-radius: 30px;
-  border-top-left-radius: 30px;
-  display: inline-block;
-  overflow: hidden;
-  box-shadow: 0 0 10px 2px var(--theme-blue);
-
-}
-
-.copyright {
-  text-align: center;
-  font-family: monospace;
-  font-size: 2rem;
-  margin-bottom: 50px;
-}
-
-.copyright a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.copyright a:hover, .copyright a:focus {
-  text-decoration: underline;
-}
-
-@media only screen and (min-width: 1000px),
-            screen and (orientation: landscape){
-  :root {
-    font-size: 5.5px;
-  }
-
-  .header {
-    height: 20rem;
-  }
-
-  .header .primary-title {
-    font-size: 7rem;
-  }
-
-  .header .firstnav, .header .secondnav {
-    top: 17rem;
-  }
-
-  .section-container {
-    display: flex;
-    justify-content: center;
-    gap: 10vw;
-    align-items: center;
-    margin: 120px 0;
-  }
-
-  .daysbetweendates, .datepastdays {
-    margin: 0;
-  }
-
-  .datepastdays__connect-design {
-    height: 60rem;
-  }
-
-}
+.footer {
+  height: 7rem;
+  background-color: #001233;
+  position: relative; }
+  .footer__copyright {
+    color: white;
+    font-size: 1.2rem;
+    font-family: monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
