@@ -1,0 +1,68 @@
+@import 'components';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  font-size: 62.5%; // 10px
+}
+
+body {
+}
+
+.header {
+  @extend %header;
+}
+
+
+.logo {
+  @extend %logo;
+
+  &--big {
+    @extend %logo--big;
+  }
+}
+
+.category, .sections, .people {
+
+}
+
+.category__item, .sections__item, .people__item{
+  @extend %item;
+}
+
+.todays-quotes {
+  @extend %quote-box-container;
+}
+
+.heading {
+  @extend %heading;
+}
+
+.quote-box {
+  @extend %quote-box;
+
+  &__quote {
+    @extend %quote;
+  }
+
+  &__mentor {
+    @extend %mentor;
+  }
+
+  &__section {
+    @extend %quote-section;
+  }
+}
+
+.footer {
+  @extend %footer;
+  &__copyright {
+    @extend %footer-link;
+  }
+}
