@@ -26,7 +26,7 @@
     top: 50%;
     transform: translateY(-50%); }
 
-.category__item, .sections__item, .people__item {
+.category__item, .sections__item, .people__item, .special__item {
   display: block;
   text-decoration: none;
   color: white;
@@ -46,7 +46,7 @@
   font-size: 2.4rem;
   text-align: center; }
 
-.todays-quotes {
+.todays-quotes, .people-quotes {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,13 +56,24 @@
 
 .quote-box {
   width: 30rem;
-  padding: 2rem 2rem 6rem;
+  padding: 3rem 2rem 6rem;
   background-color: #c5d1f6;
   position: relative;
   border-radius: 5px; }
 
+.quote-box__serial {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #c5d1f6; }
+
 .quote-box__quote {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  text-align: center; }
 
 .quote-box__mentor {
   font-size: 1.2rem;
@@ -71,6 +82,7 @@
   right: 2rem; }
 
 .quote-box__section {
+  display: none;
   font-size: 1.2rem;
   position: absolute;
   background-color: white;
