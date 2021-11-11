@@ -1,0 +1,340 @@
+/* Light Red : #F38181 */
+/* Light Blue : #95E1D3 */
+/* Light Yellow : #FCE38A */
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --theme-red: #F38181;
+  --theme-blue: #95E1D3;
+  --theme-yellow: #FCE38A;
+  font-size: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.header {
+  background-color: var(--theme-yellow);
+  height: 15rem;
+  padding: 	0.625rem;
+  padding-top: 5rem;
+  position: relative;
+}
+
+.header__primary-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 5.5rem;
+  text-align: center;
+}
+
+.header__nav--left, .header__nav--right {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline;
+  position: absolute;
+}
+
+.header__nav--left {
+  background-color: rgba(243, 129, 129, 0.5);
+  left: 3.3rem;
+  top: 14rem;
+}
+
+.header__nav--left:hover::after,
+.header__nav--left:focus::after {
+  content: 'Finds the no.of.days between the given dates. The start and end dates are also included';
+  font-size: 1.7rem;
+  display: inline-block;
+  position: absolute;
+  left: 5rem;
+  top: 7rem;
+  background-color: rgba(243, 129, 129, 0.2);
+  padding: 8px;
+  width: 120px;
+  border: 1px solid rgba(243, 129, 129, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.header__nav--right {
+  background-color: rgba(149, 225, 211, 0.5);
+  right: 2.3rem;
+  top: 14rem;
+}
+
+.header__nav--right:hover::after,
+.header__nav--right:focus::after {
+  content: 'Finds the date after/before the given days(days-to-pass) from the start date';
+  font-size: 1.7rem;
+  display: inline-block;
+  position: absolute;
+  right: 5rem;
+  top: 7rem;
+  background-color: rgba(149, 225, 211, 0.2);
+  padding: 8px;
+  width: 120px;
+  border: 1px solid rgba(149, 225, 211, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.dbd,
+.dpd {
+  margin-top: 120px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.dpd {
+  margin-bottom: 120px;
+}
+
+.dbd__connect-design {
+  width: 40vw;
+  height: 60rem;
+  border: 1rem solid rgba(243, 129, 129, 0.4);
+  border-top: 0;
+  border-right: 0;
+  position: absolute;
+  top: 18rem;
+  left: 3.3rem;
+  z-index: -1;
+}
+
+.dpd__connect-design {
+  border: 1rem solid rgba(149, 225, 211, 0.4);
+  border-top: 0;
+  border-left: 0;
+  position: absolute;
+  top: 18rem;
+  right: 3.3rem;
+  width: 40vw;
+  height: 170rem;
+  z-index: -1;
+}
+
+.dbd__horizontal-marker {
+  height: 80rem;
+  width: 4rem;
+  background-color: var(--theme-red);
+  border: 4px solid var(--theme-red);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  display: inline-block;
+}
+
+.dpd__horizontal-marker {
+  height: 80rem;
+  width: 4rem;
+  background-color: var(--theme-blue);
+  border: 4px solid var(--theme-blue);
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  display: inline-block;
+}
+
+.dbd__content {
+  background-color: white;
+  height: 80rem;
+  width: 54rem;
+  border: 4px solid var(--theme-red);
+  border-left: 0;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0 0 10px 2px var(--theme-red);
+}
+
+.dpd__content {
+  background-color: white;
+  height: 80rem;
+  width: 54rem;
+  border: 4px solid var(--theme-blue);
+  border-right: 0;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0 0 10px 2px var(--theme-blue);
+
+}
+
+.dbd__flexbox-main,
+.dpd__flexbox-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8.5rem;
+  margin-top: 10rem;
+}
+
+.dbd__start-date,
+.dbd__end-date,
+.dpd__start-date,
+.dpd__days-to-pass-box {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.dbd__start-date-label,
+.dbd__end-date-label,
+.dpd__start-date-label,
+.dpd__days-to-pass-label {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 3.5rem;
+}
+
+.dbd__start-date-inputs,
+.dbd__end-date-inputs,
+.dpd__start-date-inputs,
+.dpd__days-to-pass {
+  float: right;
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+
+.dbd__start-day,
+.dbd__start-month,
+.dbd__start-year,
+.dbd__end-day,
+.dbd__end-month,
+.dbd__end-year,
+.dpd__start-day,
+.dpd__start-month,
+.dpd__start-year,
+.dpd__days-to-pass {
+  display: inline-block;
+  height: 5rem;
+  width: 6rem;
+  border: 3px solid var(--theme-red);
+  border-radius: 10px;
+  font-size: 3rem;
+  padding-left: 1rem;
+}
+
+.dbd__start-year,
+.dbd__end-year,
+.dpd__start-year {
+  width: 10rem;
+}
+
+.dpd__days-to-pass {
+  width: 24rem;
+}
+
+.dpd__start-day, .dpd__start-month, .dpd__start-year, .dpd__days-to-pass {
+  border-color: var(--theme-blue);
+}
+
+.dbd__result-box,
+.dpd__result-box {
+  padding: 2rem;
+  background-color: rgba(89, 88, 88, 0.2);
+  border: 2px solid grey;
+  border-radius: 10px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 45rem;
+  margin: 3rem auto 0 auto;
+}
+
+.dpd__result-box {
+  width: 28rem;
+}
+
+.dbd__btn,
+.dpd__btn {
+  padding: 2rem 3rem;
+  width: 12rem;
+  margin: 3rem auto 0 auto;
+  font-size: 3rem;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
+
+.dbd__btn:hover,
+.dpd__btn:hover {
+  box-shadow: 0 0 3px grey;
+}
+
+.dbd__btn:active,
+.dpd__btn:active {
+  transform: translateY(1.5px);
+}
+
+.clicked {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.warning {
+  color: red;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.copyright {
+  text-align: center;
+  font-family: monospace;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.copyright__link-to {
+  color: inherit;
+  text-decoration: none;
+}
+
+.copyright__link-to:hover,
+.copyright__link-to:focus {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 1000px),
+            screen and (orientation: landscape){
+  :root {
+    font-size: 5.5px;
+  }
+
+  .header {
+    height: 20rem;
+  }
+
+  .header__primary-title {
+    font-size: 7rem;
+  }
+
+  .header__nav--left, .header__nav--right {
+    top: 17rem;
+  }
+
+  .section-container {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    align-items: center;
+    margin: 120px 0;
+  }
+
+  .dbd, .dpd {
+    margin: 0;
+  }
+
+  .dpd__connect-design {
+    height: 60rem;
+  }
+
+}
