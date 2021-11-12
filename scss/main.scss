@@ -92,7 +92,9 @@ body {
   }
 }
 
-
+.load-btn {
+  @extend %item;  
+}
 
 .footer {
   @extend %footer;
