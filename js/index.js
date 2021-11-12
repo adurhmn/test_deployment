@@ -11,9 +11,9 @@ function gotoQuote () {
     loadMore(target);
   }
   if (Number(target) <= total) {
-    location.href = `#q-${target}`;
+    location.href = `#q-${target-1}`; //-1 to get down from fixed nav
   } else {
-    location.href = `#q-${total}`;
+    location.href = `#q-${total-1}`;
   }
 }
 
