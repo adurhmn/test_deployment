@@ -1,3 +1,5 @@
+const pageData = ['buddha', 'elon-musk', 'jeff-bezos', 'osho', 'socrates', 'cristiano-ronaldo',
+                  'business', 'love', 'happiness', 'inspiration', 'self-confidence', 'life-insights']
 
 const quotes = document.querySelectorAll('.quote-box');
 const quotesSerial = document.querySelectorAll('.quote-box__serial');
@@ -11,9 +13,9 @@ function gotoQuote () {
     loadMore(target);
   }
   if (Number(target) <= total) {
-    location.href = `#q-${target-1}`; //-1 to get down from fixed nav
+    location.replace(`#q-${target-1 >= 1 ? target-1 : 1}`); //-1 to get down from fixed nav
   } else {
-    location.href = `#q-${total-1}`;
+    location.replace(`#q-${total-1}`); //-1 to get down from fixed nav
   }
 }
 
@@ -50,4 +52,19 @@ document.querySelector('.nav__goto-input').addEventListener('keyup', function (e
   if (event.key === "Enter") {
     gotoQuote();
   }
+})
+
+// Next/Prev Page Implementation-----------------------------------------------/
+document.querySelector('.nav__prev-page').addEventListener('click', function () {
+  const currentPage = (location.pathname.split('/').pop()).split('.')[0];
+  const prevPageIndex = pageData.indexOf(currentPage) - 1;
+  const prevPage = pageData[prevPageIndex >= 0 ? prevPageIndex : pageData.length];
+  location.replace(prevPage + '.html')
+})
+
+document.querySelector('.nav__next-page').addEventListener('click', function () {
+  const currentPage = (location.pathname.split('/').pop()).split('.')[0];
+  const nextPageIndex = pageData.indexOf(currentPage) + 1;
+  const nextPage = pageData[nextPageIndex <= pageData.length ? nextPageIndex : 0];
+  location.replace(nextPage + '.html')
 })
