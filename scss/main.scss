@@ -28,15 +28,43 @@ body {
   }
 }
 
+.nav {
+  @extend %nav;
+
+  &__prev-page {
+    @extend %arrow;
+    transform: rotate(45deg);
+  }
+
+  &__next-page {
+    @extend %arrow;
+    transform: rotate(-135deg);
+  }
+
+  &__goto {
+    display: flex;
+    align-items: center;
+  }
+
+  &__goto-input {
+    @extend %search-input;
+  }
+
+  &__goto-btn {
+    @extend %search-btn;
+  }
+}
+
+
 .category, .sections, .people {
 
 }
 
-.category__item, .sections__item, .people__item{
+.category__item, .sections__item, .people__item, .special__item{
   @extend %item;
 }
 
-.todays-quotes {
+.todays-quotes, .people-quotes {
   @extend %quote-box-container;
 }
 
@@ -46,6 +74,10 @@ body {
 
 .quote-box {
   @extend %quote-box;
+
+  &__serial {
+    @extend %serial
+  }
 
   &__quote {
     @extend %quote;
@@ -59,6 +91,8 @@ body {
     @extend %quote-section;
   }
 }
+
+
 
 .footer {
   @extend %footer;
