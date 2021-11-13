@@ -65,6 +65,6 @@ document.querySelector('.nav__prev-page').addEventListener('click', function () 
 document.querySelector('.nav__next-page').addEventListener('click', function () {
   const currentPage = (location.pathname.split('/').pop()).split('.')[0];
   const nextPageIndex = pageData.indexOf(currentPage) + 1;
-  const nextPage = pageData[nextPageIndex <= pageData.length ? nextPageIndex : 0];
+  const nextPage = pageData[nextPageIndex <= pageData.length - 1? nextPageIndex : 0];
   location.replace(nextPage + '.html')
 })
