@@ -58,7 +58,7 @@ document.querySelector('.nav__goto-input').addEventListener('keyup', function (e
 document.querySelector('.nav__prev-page').addEventListener('click', function () {
   const currentPage = (location.pathname.split('/').pop()).split('.')[0];
   const prevPageIndex = pageData.indexOf(currentPage) - 1;
-  const prevPage = pageData[prevPageIndex >= 0 ? prevPageIndex : pageData.length];
+  const prevPage = pageData[prevPageIndex >= 0 ? prevPageIndex : pageData.length - 1];
   location.replace(prevPage + '.html')
 })
 
