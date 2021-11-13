@@ -162,3 +162,17 @@ html {
 .nav__goto {
   display: flex;
   align-items: center; }
+
+@media only screen and (min-width: 481px) {
+  html {
+    font-size: 65%; }
+  .nav, .quote-box {
+    width: 35rem; }
+  .todays-quotes, .people-quotes {
+    gap: 4rem; } }
+
+@media only screen and (min-width: 769px) {
+  html {
+    font-size: 68%; }
+  .nav, .quote-box {
+    width: 45rem; } }
