@@ -78,14 +78,15 @@
   background-image: linear-gradient(315deg, rgba(3, 229, 183, 0.6) 0%, rgba(3, 122, 222, 0.6) 74%);
   width: 20rem;
   padding: 1.5rem;
-  margin: 4.5rem auto 0 auto; }
+  margin: 4.5rem auto 0 auto;
+  cursor: pointer; }
 
 .heading {
   margin: 10rem 0 5rem 0;
   font-size: 2.4rem;
   text-align: center; }
 
-.todays-quotes, .people-quotes {
+.quote-box-container {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -68,7 +68,7 @@ body {
   @extend %item;
 }
 
-.todays-quotes, .people-quotes {
+.quote-box-container {
   @extend %quote-box-container;
 }
 
