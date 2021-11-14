@@ -5,7 +5,7 @@
 
 $('.aside').css('display', 'none');
 $('.aside').load('../pages/influential-quotes.html .quote-box');
-setTimeout(displayRandomQuotes, 100); // making sure the DOM of
+setTimeout(displayRandomQuotes, 1000); // making sure the DOM of
                                       // "pages/influential-quotes.html" is complete.
 
 function displayRandomQuotes () {
@@ -24,7 +24,7 @@ function displayRandomQuotes () {
   let pickedRandoms = [];
 
   for (i=0; i<quotesMain.length; i++) {
-    let randomNumber;
+    let randomNumber = Math.ceil(Math.random()*quotes.length); //1-15 if available quotes is 15;
     while (true) {
       randomNumber = Math.ceil(Math.random()*quotes.length); //1-15 if available quotes is 15
       if (pickedRandoms.indexOf(randomNumber) === -1) {
