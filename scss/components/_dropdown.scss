@@ -1,0 +1,32 @@
+@use '../abstract/variable' as *;
+
+.dropdown-icon__top,
+.dropdown-icon__middle,
+.dropdown-icon__bottom{
+  background-color: transparent;
+  box-sizing: content-box;
+  width: 3.5rem;
+  height: 8px;
+  border: solid $color-white;
+  border-width: 3px 0 0 0;
+}
+
+.dropdown-icon__bottom {
+  height: 0;
+}
+
+.dropdown-icon {
+  display: none;
+  background-color: transparent;
+}
+
+// For Mobile
+@media only screen 
+and (min-width: 0)
+and (max-width: $mobile-breakpoint-end) {
+
+    .dropdown-icon {
+        display: inline-block;
+    }
+
+}

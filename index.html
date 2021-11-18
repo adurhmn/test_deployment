@@ -1,92 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lexend+Deca:wght@500&family=Montserrat:wght@500&family=Ubuntu:wght@500&display=swap&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Qootes</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Space Tourism | Home</title>
 </head>
-
 <body>
-  <header class='header'>
-    <span class='logo logo--big'>Qootes</span>
-  </header>
+    <header class="header">
+        <span class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg></span>
+        <nav class="nav nav--primary">
+            <nav class="nav__item nav__item--primary nav-home u-border-bottom-white"><span>00</span>&nbsp;home</nav>
+            <nav class="nav__item nav__item--primary nav-destination"><span>01</span>&nbsp;destination</nav>
+            <nav class="nav__item nav__item--primary nav-crew"><span>02</span>&nbsp;crew</nav>
+            <nav class="nav__item nav__item--primary nav-technology"><span>03</span>&nbsp;technology</nav>
+        </nav>
+        <div class="dropdown-icon">
+            <div class="dropdown-icon__top"></div>
+            <div class="dropdown-icon__middle"></div>
+            <div class="dropdown-icon__bottom"></div>
+        </div>
+    </header>
+    <main class='main'>
+        <section class='home' id='home'>
+            <div class='home__text'>
+                <span class="h-5 u-mg-btm-small u-inline-block">So, you want to travel to</span>
+                <span class="home__title h-1 u-mg-btm-medium u-block">Space</span>
+                <span class='body-text'>Let’s face it; if you want to go to space, you might as well genuinely go to 
+                    outer space and not hover kind of on the edge of it. Well sit back, and relax 
+                    because we’ll give you a truly out of this world experience!</span>
+            </div>
+            <a href="#" class="home__btn h-4">explore</a>
+        </section>
 
-  <main>
-    <section class="category">
-      <a href="pages/people.html" class='category__item'>People</a>
-      <a href="pages/sections.html" class='category__item'>Sections</a>
-    </section>
+        <section class='destination u-hidden' id='destination'>
+            <span class="destination__title h-5 u-mg-btm-vbig u-inline-block"><span class='u-col-grey u-bold'>01</span>&nbsp;Pick your destination</span>
+            <div class="destination-moon u-flex-center-row u-flex-gap-small-responsive">
+                <img src="assets/destination/image-moon.png" alt="moon-img" class="destination__img">
+                <div class="destination__content">
+                    <nav class="nav nav--secondary u-mg-btm-big">
+                        <nav class="nav__item nav__item--secondary nav-moon u-border-bottom-white">moon</nav>
+                        <nav class="nav__item nav__item--secondary nav-mars">mars</nav>
+                        <nav class="nav__item nav__item--secondary nav-europa">europa</nav>
+                        <nav class="nav__item nav__item--secondary nav-titan">titan</nav>
+                    </nav>
+                    <span class="destination__sub-title h-2 u-mg-btm-medium u-block">moon</span>
+                    <span class="destination__body body-text u-pd-btm-big u-mg-btm-big u-border-bottom-black u-inline-block">  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+                        regain perspective and come back refreshed. While you’re there, take in some history 
+                        by visiting the Luna 2 and Apollo 11 landing sites.</span>
+                    <table class="tvl-info--moon">
+                        <tr>
+                            <td class="tvl-label sh-2">avg. distance</td>
+                            <td class="tvl-label sh-2">est. travel time</td>
+                        </tr>
+                        <tr>
+                            <td class="tvl-distance sh-1 u-mg-right-vbig u-inline-block">384,400 km</td>
+                            <td class="tvl-duration sh-1">3 days</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
 
-    <h1 class="heading">Quote Feed</h1>
-    <section class="quote-box-container">
-      <div class="quote-box">
-        <blockquote class="quote-box__quote">
-        </blockquote>
-        <span class="quote-box__mentor"></span>
-      </div>
+    </main>
 
-      <div class="quote-box">
-        <blockquote class="quote-box__quote">
-        </blockquote>
-        <span class="quote-box__mentor"></span>
-      </div>
-
-      <div class="quote-box">
-        <blockquote class="quote-box__quote">
-        </blockquote>
-        <span class="quote-box__mentor"></span>
-      </div>
-
-      <div class="quote-box">
-        <blockquote class="quote-box__quote">
-        </blockquote>
-        <span class="quote-box__mentor"></span>
-      </div>
-
-      <div class="quote-box">
-        <blockquote class="quote-box__quote">
-        </blockquote>
-        <span class="quote-box__mentor"></span>
-      </div>
-
-      <div class="quote-box">
-        <blockquote class="quote-box__quote">
-        </blockquote>
-        <span class="quote-box__mentor"></span>
-      </div>
-
-      <div class="quote-box">
-        <blockquote class="quote-box__quote">
-        </blockquote>
-        <span class="quote-box__mentor"></span>
-      </div>
-
-      <div class="quote-box">
-        <blockquote class="quote-box__quote">
-        </blockquote>
-        <span class="quote-box__mentor"></span>
-      </div>
-    </section>
-    <a href="pages/influential-quotes.html" class='special__item'>Influential Quotes</a>
-
-  </main>
-
-  <div class='aside'>
-  </div>
-
-  <footer class='footer'>
-    <span class='footer__copyright'>Developed by <span class='footer__dev'>@adurhmn</span></span>
-  </footer>
-
-
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-  <script src="js/random-pick.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/data.js"></script>
+    <script src="js/index.js"></script>
 </body>
-
 </html>

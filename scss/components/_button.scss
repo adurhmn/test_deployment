@@ -1,0 +1,33 @@
+@use '../abstract/variable' as *;
+
+.home__btn {
+    display: inline-block;
+    color: $color-black;
+    background-color: $color-white;
+    text-decoration: none;
+    height: 20rem;
+    width: 20rem;
+    min-width: 20rem;
+    border-radius: 50%;
+    line-height: 20rem;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: lighten($color-black, 7%);
+        transition: all .1s
+    }
+
+    &:hover::after {
+        transform: scale(1.5);
+    }
+}

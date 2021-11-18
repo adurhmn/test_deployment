@@ -1,0 +1,117 @@
+@use '../abstract/variable' as *;
+
+body {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+    background-size: 100vw 100vh;
+    min-width: 300px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95vw;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+}
+
+.logo {
+    display: inline-block;
+    width: 3.8rem;
+}
+
+.main {
+    width: 100%;
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-40%);
+}
+
+.home {
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+
+.home__text {
+    display: inline-block;
+    width: 45rem;
+}
+
+// .main {
+//     width: 100%;
+//     position: absolute;
+//     bottom: 0;
+// }
+
+// .home {
+//     width: 75vw;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     margin: 0 auto $main-content-bottom-gap auto;
+// }
+
+
+// .home__text {
+//     display: inline-block;
+//     width: 45rem;
+// }
+
+
+// For Tablets
+@media only screen 
+and (min-width: $tablet-breakpoint-start)
+and (max-width: $tablet-breakpoint-end) {
+
+    body {
+        background-image: url("../../assets/home/background-home-tablet.jpg");
+    }
+
+    .header {
+        top: 0;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home__text {
+        transform: translateY(-20%);
+        width: 75vw;
+        max-width: 65rem;
+    }
+}
+
+// For Mobile
+@media only screen 
+and (min-width: 0) 
+and (max-width: $mobile-breakpoint-end) {
+    body {
+        background-image: url("../assets/home/background-home-mobile.jpg");
+    }
+
+    .header {
+        width: 90vw;
+        top: 2rem;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home__text {
+        transform: translateY(-15%);
+        width: 80vw;
+    }
+}

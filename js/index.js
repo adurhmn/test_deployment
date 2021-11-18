@@ -1,70 +1,64 @@
-const pageData = ['buddha', 'elon-musk', 'jeff-bezos', 'osho', 'socrates', 'cristiano-ronaldo',
-                  'business', 'love', 'happiness', 'inspiration', 'self-confidence', 'life-insights']
+$('.nav-home').on('click', function () {
+    goToSection ('home')
+} );
+$('.nav-destination').on('click', function () {
+    goToSection ('destination')
+} );
+$('.nav-crew').on('click', function () {
+    goToSection ('crew')
+} );
+$('.nav-technology').on('click', function () {
+    goToSection ('technology')
+} );
 
-const quotes = document.querySelectorAll('.quote-box');
-const quotesSerial = document.querySelectorAll('.quote-box__serial');
-const total = quotes.length;
-let currentVisibleQuotes = 10;
-const visiblityLimit = 10;
+function goToSection (section) {
+    $(`.nav-home`).removeClass('u-border-bottom-white');
+    $(`.nav-destination`).removeClass('u-border-bottom-white');
+    $(`.nav-crew`).removeClass('u-border-bottom-white');
+    $(`.nav-technology`).removeClass('u-border-bottom-white');
+    $(`.nav-${section}`).addClass('u-border-bottom-white');
 
-function gotoQuote () {
-  const target = Number(document.querySelector('.nav__goto-input').value);
-  if (currentVisibleQuotes < target) {
-    loadMore(target);
-  }
-  if (Number(target) <= total) {
-    location.replace(`#q-${target-1 >= 1 ? target-1 : 1}`); //-1 to get down from fixed nav
-  } else {
-    location.replace(`#q-${total-1}`); //-1 to get down from fixed nav
-  }
+    $('body').css('background-image', `url('assets/${section}/background-${section}-desktop.jpg')`)
+
+    $('.home').addClass('u-hidden');
+    $('.destination').addClass('u-hidden');
+    $('.crew').addClass('u-hidden');
+    $('.technology').addClass('u-hidden');
+    $(`.${section}`).removeClass('u-hidden');
+
+
 }
 
-function loadMore(to) {
-  if (to > total) {
-    to = total;
-    document.querySelector('.load-btn').style.display = 'none';
-  }
-  for (i=currentVisibleQuotes; i<=to; i++) {
-    quotes[i-1].style.display = 'block';
-  }
+$('.nav-moon').on('click', function () {
+    goToDestination('moon')
+});
+$('.nav-mars').on('click', function () {
+    goToDestination('mars')
+});
+$('.nav-europa').on('click', function () {
+    goToDestination('europa')
+});
+$('.nav-titan').on('click', function () {
+    goToDestination('titan')
+});
 
-  currentVisibleQuotes = to;
+
+function goToDestination (destination) {
+    console.log(destination)
+    $(`.nav-moon`).removeClass('u-border-bottom-white');
+    $(`.nav-mars`).removeClass('u-border-bottom-white');
+    $(`.nav-europa`).removeClass('u-border-bottom-white');
+    $(`.nav-titan`).removeClass('u-border-bottom-white');
+    $(`.nav-${destination}`).addClass('u-border-bottom-white');
+
+    $('.destination__img').attr('src', `assets/destination/image-${destination}.png`);
+
+    $('.destination__sub-title').text(data['destinations'][destination]['name'])
+    $('.destination__body').text(data['destinations'][destination]['description'])
+    $('.tvl-distance').text(data['destinations'][destination]['distance'])
+    $('.tvl-duration').text(data['destinations'][destination]['travel'])
 }
 
-// Initial settings------------------------------------------------------------/
-for (i=1; i<=total; i++) {
-  quotes[i-1].setAttribute('id', `q-${i}`);
-  quotesSerial[i-1].textContent = i;
-
-  if (i > currentVisibleQuotes) {
-    quotes[i-1].style.display = 'none';
-  }
-}
-
-// Load More Implementation----------------------------------------------------|
-document.querySelector('.load-btn').addEventListener('click', function () {
-  loadMore(currentVisibleQuotes + visiblityLimit)
-})
-
-// Search Implementation-------------------------------------------------------|
-document.querySelector('.nav__goto-btn').addEventListener('click', gotoQuote)
-document.querySelector('.nav__goto-input').addEventListener('keyup', function (event) {
-  if (event.key === "Enter") {
-    gotoQuote();
-  }
-})
-
-// Next/Prev Page Implementation-----------------------------------------------/
-document.querySelector('.nav__prev-page').addEventListener('click', function () {
-  const currentPage = (location.pathname.split('/').pop()).split('.')[0];
-  const prevPageIndex = pageData.indexOf(currentPage) - 1;
-  const prevPage = pageData[prevPageIndex >= 0 ? prevPageIndex : pageData.length - 1];
-  location.replace(prevPage + '.html')
-})
-
-document.querySelector('.nav__next-page').addEventListener('click', function () {
-  const currentPage = (location.pathname.split('/').pop()).split('.')[0];
-  const nextPageIndex = pageData.indexOf(currentPage) + 1;
-  const nextPage = pageData[nextPageIndex < pageData.length ? nextPageIndex : 0];
-  location.replace(nextPage + '.html')
+$('.dropdown-icon').on('click', function () {
+    $('.drop').addClass('hidden')
 })
