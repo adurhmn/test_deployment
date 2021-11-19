@@ -70,7 +70,7 @@ body {
     max-width: 65rem;
   }
 }
-@media only screen and (min-width: 0) and (max-width: 480px), (orientation: landscape) {
+@media only screen and (min-width: 0) and (max-width: 480px) {
   body {
     background-image: url("../assets/home/background-home-mobile.jpg");
   }
@@ -89,6 +89,12 @@ body {
   .home__text {
     transform: translateY(-15%);
     width: 80vw;
+  }
+}
+@media only screen and (orientation: landscape) {
+  main {
+    top: 40vh;
+    margin-bottom: 20vh;
   }
 }
 .destination {
@@ -155,7 +161,7 @@ body {
     margin: 0 auto;
   }
 }
-@media only screen and (min-width: 0) and (max-width: 480px), (orientation: landscape) {
+@media only screen and (min-width: 0) and (max-width: 480px) {
   .destination {
     margin-bottom: 20vh;
   }
@@ -414,17 +420,17 @@ body {
     font-size: 50%;
   }
 }
-@media only screen and (min-width: 0) and (max-width: 480px), (orientation: landscape) {
+@media only screen and (min-width: 0) and (max-width: 480px) {
   html {
     font-size: 50%;
   }
 
   .h-1, .h-2 {
-    font-size: 6rem;
+    font-size: 7rem;
   }
 
   .h-5 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .sh-1 {
