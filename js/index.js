@@ -1,22 +1,29 @@
-$('.nav-home').on('click', function () {
-    goToSection ('home')
+$('.nav-home').on('click', function (event) {
+    goToSection ('home', event)
 } );
-$('.nav-destination').on('click', function () {
-    goToSection ('destination')
+$('.nav-destination').on('click', function (event) {
+    goToSection ('destination', event)
 } );
-$('.nav-crew').on('click', function () {
-    goToSection ('crew')
+$('.nav-crew').on('click', function (event) {
+    goToSection ('crew', event)
 } );
-$('.nav-technology').on('click', function () {
-    goToSection ('technology')
+$('.nav-technology').on('click', function (event) {
+    goToSection ('technology', event)
 } );
 
-function goToSection (section) {
-    $(`.nav-home`).removeClass('u-border-bottom-white');
-    $(`.nav-destination`).removeClass('u-border-bottom-white');
-    $(`.nav-crew`).removeClass('u-border-bottom-white');
-    $(`.nav-technology`).removeClass('u-border-bottom-white');
-    $(`.nav-${section}`).addClass('u-border-bottom-white');
+function goToSection (section, event) {
+
+    $(`.nav__item--primary.nav-home`).removeClass(`u-border-bottom-white`);
+    $(`.nav__item--primary.nav-destination`).removeClass( `u-border-bottom-white`);
+    $(`.nav__item--primary.nav-crew`).removeClass(`u-border-bottom-white`);
+    $(`.nav__item--primary.nav-technology`).removeClass(`u-border-bottom-white`);
+    $(`.nav__item--primary.nav-${section}`).addClass( `u-border-bottom-white`);
+
+    $(`.nav__item--mobile.nav-home`).removeClass(`u-border-left-white`);
+    $(`.nav__item--mobile.nav-destination`).removeClass( `u-border-left-white`);
+    $(`.nav__item--mobile.nav-crew`).removeClass(`u-border-left-white`);
+    $(`.nav__item--mobile.nav-technology`).removeClass(`u-border-left-white`);
+    $(`.nav__item--mobile.nav-${section}`).addClass( `u-border-left-white`);
 
     $('body').css('background-image', `url('assets/${section}/background-${section}-desktop.jpg')`)
 
@@ -25,8 +32,6 @@ function goToSection (section) {
     $('.crew').addClass('u-hidden');
     $('.technology').addClass('u-hidden');
     $(`.${section}`).removeClass('u-hidden');
-
-
 }
 
 $('.nav-moon').on('click', function () {
@@ -60,5 +65,9 @@ function goToDestination (destination) {
 }
 
 $('.dropdown-icon').on('click', function () {
-    $('.drop').addClass('hidden')
+    $('.nav--mobile').addClass('clicked');
+})
+
+$('.nav--mobile__btn-close').on('click', function () {
+    $('.nav--mobile').removeClass('clicked');
 })

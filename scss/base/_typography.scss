@@ -74,11 +74,16 @@ and (max-width: $mobile-breakpoint-end) {
         font-size: 50%;
     }
 
-    .h-1 {
-        font-size: 10rem;
+    .h-1, .h-2 {
+        font-size: 6rem;
     }
 
     .h-5 {
+        font-size: 1.5rem;
+    }
+
+    .sh-1 {
+        font-family: 'Bellefair', serif;
         font-size: 2rem;
     }
 

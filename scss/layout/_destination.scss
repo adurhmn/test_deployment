@@ -17,6 +17,26 @@
     width: 40rem;
 }
 
+.tvl-info--moon {
+    white-space: nowrap;
+}
+
+.tvl-distance {
+    display: inline-block;
+    margin-right: 5rem;
+    span {
+        margin-bottom: .5rem;
+    }
+}
+
+.tvl-duration {
+    display: inline-block;
+    margin-right: 5rem;
+    span {
+        margin-bottom: .5rem;
+    }
+}
+
 //For Tablets
 @media only screen 
 and (min-width: $tablet-breakpoint-start)
@@ -67,7 +87,9 @@ and (max-width: $mobile-breakpoint-end) {
     }
 
     .destination__title {
-        margin-left: -5rem;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .destination-moon {
@@ -86,5 +108,10 @@ and (max-width: $mobile-breakpoint-end) {
 
     .tvl-info--moon {
         margin: 0 auto;
+    }
+
+    .tvl-distance, .tvl-duration {
+        display: block;
+        margin-bottom: 2rem;
     }
 }

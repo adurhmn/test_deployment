@@ -24,6 +24,13 @@
             <div class="dropdown-icon__middle"></div>
             <div class="dropdown-icon__bottom"></div>
         </div>
+        <nav class='nav nav--mobile'>
+            <span class='nav--mobile__btn-close h-4'>&#x2715;</span>
+            <nav class="nav__item nav__item--mobile nav-home"><span>00</span>&nbsp;home</nav>
+            <nav class="nav__item nav__item--mobile nav-destination"><span>01</span>&nbsp;destination</nav>
+            <nav class="nav__item nav__item--mobile nav-crew"><span>02</span>&nbsp;crew</nav>
+            <nav class="nav__item nav__item--mobile nav-technology"><span>03</span>&nbsp;technology</nav>
+        </nav>
     </header>
     <main class='main'>
         <section class='home' id='home'>
@@ -52,16 +59,17 @@
                     <span class="destination__body body-text u-pd-btm-big u-mg-btm-big u-border-bottom-black u-inline-block">  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
                         regain perspective and come back refreshed. While you’re there, take in some history 
                         by visiting the Luna 2 and Apollo 11 landing sites.</span>
-                    <table class="tvl-info--moon">
-                        <tr>
-                            <td class="tvl-label sh-2">avg. distance</td>
-                            <td class="tvl-label sh-2">est. travel time</td>
-                        </tr>
-                        <tr>
-                            <td class="tvl-distance sh-1 u-mg-right-vbig u-inline-block">384,400 km</td>
-                            <td class="tvl-duration sh-1">3 days</td>
-                        </tr>
-                    </table>
+
+                    <div class="tvl-info--moon">
+                        <div class='tvl-distance'>
+                            <span class="sh-2 u-block">avg. distance</span>
+                            <span class="sh-1 u-block">384,400 km</span>
+                        </div>
+                        <div class='tvl-duration'>
+                            <span class="sh-2 u-block">est. travel time</span>
+                            <span class="sh-1 u-block">3 days</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
