@@ -94,7 +94,7 @@ body {
 @media only screen and (orientation: landscape) {
   .main {
     top: 40vh;
-    margin-bottom: 20vh;
+    padding-bottom: 20vh;
   }
 }
 .destination {
@@ -436,6 +436,20 @@ body {
   .sh-1 {
     font-family: "Bellefair", serif;
     font-size: 2rem;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .main {
+    top: 40vh;
+    padding-bottom: 20vh;
+  }
+
+  html {
+    font-size: 50%;
+  }
+
+  .body-text {
+    font-weight: normal;
   }
 }
 .u-flex-between-row {
