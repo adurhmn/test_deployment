@@ -1,0 +1,117 @@
+@use '../abstract/variable' as *;
+
+.bg-crew {
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+    background-size: 100vw 100vh;
+    min-width: 300px;
+}
+
+.crew {
+    height: 80vh;
+    max-height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.crew__text {
+    max-width: 50rem;
+    align-self: start;
+    margin-top: 12rem;
+}
+
+.crew__title {
+    position: absolute;
+    left: 5vw;
+    top: 0;
+}
+
+.crew__img {
+    height: 100%;
+    align-self: end;
+}
+
+
+//For Tablets
+@media only screen 
+and (min-width: $tablet-breakpoint-start)
+and (max-width: $tablet-breakpoint-end) {
+
+    .bg-crew {
+        background-image: url("../assets/crew/background-crew-tablet.jpg");
+    }
+
+    .crew {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .crew__text {
+        align-self: center;
+    }
+
+    .crew__title {
+        top: -10vh;
+    }
+
+    .crew__img {
+        height: 40vh;
+        align-self: center;
+    }
+}
+
+//For Mobile Devices
+@media only screen 
+and (min-width: 0)
+and (max-width: $mobile-breakpoint-end) {
+
+    .bg-crew {
+        background-image: url("../assets/crew/background-crew-mobile.jpg");
+    }
+    
+    .crew {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        justify-content: start;
+    }
+
+    .crew__text {
+        margin-top: 4rem;
+        align-self: center;
+        position: relative;
+        padding-top: 6rem;
+        width: 80%;
+    }
+
+    .crew__img {
+        padding: 0 20vw;
+        height: 30vh;
+        align-self: center;
+        border: solid grey;
+        border-width: 0 0 2px 0;
+    }
+   
+    .crew__title {
+        top: -8vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%
+    }
+
+    .crew__sub-title {
+        &--sub, &--main {
+            white-space: nowrap;
+        }
+    }
+}
+
+// For Mobile Landscape
+@media only screen 
+and (max-width: 850px)
+and (orientation: landscape) { 
+    .bg-crew {
+        background-image: url("../assets/crew/background-crew-tablet.jpg");
+    }
+}

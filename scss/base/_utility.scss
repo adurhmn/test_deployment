@@ -51,8 +51,12 @@
 }
 
 .u-col-grey { color: grey };
+.u-col-light-white { color: rgba($color-white, .5) }
 .u-bold { font-weight: bold };
 
 .u-width-75 { width: 75%};
 
 .u-hidden { display: none; }
+
+.u-bg-col-white { background-color: $color-white };
+.u-text-col-black { color: $color-black };

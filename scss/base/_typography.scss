@@ -6,34 +6,34 @@ body {
 }
 
 .h-1 {
-    font-family: 'Bellefair', serif;     
+    font-family: 'Bellefair';     
     font-size: 15rem;
 }
 .h-2 {
-    font-family: 'Bellefair', serif;     
+    font-family: 'Bellefair';     
     font-size: 10rem;
 }
 .h-3 {
-    font-family: 'Bellefair', serif;     
+    font-family: 'Bellefair';     
     font-size: 5.6rem;
 }
 .h-4 {
-    font-family: 'Bellefair', serif;     
+    font-family: 'Bellefair';     
     font-size: 3.2rem;
 }
 .h-5 {
-    font-family: 'Barlow Condensed', serif;     
+    font-family: 'Barlow Condensed';     
     font-size: 2.8rem;
     letter-spacing: 4.75px;
 }
 
 .sh-1 {
-    font-family: 'Bellefair', serif;
+    font-family: 'Bellefair';
     font-size: 2.8rem;
 }
 
 .sh-2 {
-    font-family: 'Barlow Condensed', serif;
+    font-family: 'Barlow Condensed';
     font-size: 1.4rem;
     letter-spacing: 2.35px;
 }
@@ -48,10 +48,11 @@ body {
 }
 
 .nav__item {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Barlow Condensed';
     font-size: 1.6rem;
     letter-spacing: 2.7px;
 }
+
 
 
 //For Tablets
@@ -61,8 +62,6 @@ and (max-width: $tablet-breakpoint-end) {
     html {
         font-size: 50%;
     }
-
-    
 }
 
 //For Mobile Devices
@@ -75,11 +74,11 @@ and (max-width: $mobile-breakpoint-end) {
     }
 
     .h-1, .h-2 {
-        font-size: 6rem;
+        font-size: 7rem;
     }
 
     .h-5 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .sh-1 {
@@ -87,5 +86,36 @@ and (max-width: $mobile-breakpoint-end) {
         font-size: 2rem;
     }
 
+    .crew__sub-title {
+        &--sub {
+            font-size: 2.2rem;
+        }
+        &--main {
+            font-size: 4.2rem;
+        }
+    }
 
+    .technology__sub-title {
+        &--main {
+            font-size: 4.2rem;
+        }
+    }
+}
+
+// For Mobile Landscape
+@media only screen 
+and (max-width: 850px)
+and (orientation: landscape) { 
+    .main {
+        top: 40vh;
+        padding-bottom: 20vh;
+    }
+
+    html {
+        font-size: 50%;
+    }
+
+    .body-text {
+        font-weight: normal;
+    }
 }

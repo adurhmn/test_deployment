@@ -1,19 +1,35 @@
 @use '../abstract/variable' as *;
 
+.bg-destination {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+    background-size: 100vw 100vh;
+    min-width: 300px;
+}
+
 .destination {
     width: 70vw;
-    margin: 0 auto;
+    margin: 12vh auto 0 auto;
+}
+
+.destination-moon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+}
+
+.destination__title {
+    position: absolute;
+    top: 0;
+    left: 5vw;
 }
 
 .destination__content {
     margin-top: -5rem;
-}
-
-.destination__img {
     width: 40rem;
 }
 
-.destination__content {
+.destination__img {
     width: 40rem;
 }
 
@@ -42,16 +58,16 @@
 and (min-width: $tablet-breakpoint-start)
 and (max-width: $tablet-breakpoint-end) {
 
-    // body {
-    //     background-image: url("../../assets/destination/background-destination-tablet.jpg");
-    // }
+    .bg-destination {
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
+    }
 
     .destination {
-        margin-bottom: 20vh;
+        margin-top: 0;
     }
 
     .destination__title {
-        margin-left: -5rem;
+        top: -8vh;
     }
 
     .destination-moon {
@@ -78,18 +94,19 @@ and (max-width: $tablet-breakpoint-end) {
 and (min-width: 0)
 and (max-width: $mobile-breakpoint-end) {
 
-    // body {
-    //     background-image: url("../../assets/destination/background-destination-tablet.jpg");
-    // }
+    .bg-destination {
+        background-image: url("../assets/destination/background-destination-mobile.jpg");
+    }
 
     .destination {
-        margin-bottom: 20vh;
+        margin-top: 0;
     }
 
     .destination__title {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+        top: -8vh;
+        left: 0;
+        width: 100%;
+        text-align: center;
     }
 
     .destination-moon {
@@ -113,5 +130,14 @@ and (max-width: $mobile-breakpoint-end) {
     .tvl-distance, .tvl-duration {
         display: block;
         margin-bottom: 2rem;
+    }
+}
+
+// For Mobile Landscape
+@media only screen 
+and (max-width: 850px)
+and (orientation: landscape) { 
+    .bg-destination {
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
     }
 }
