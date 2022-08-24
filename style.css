@@ -1,0 +1,62 @@
+@font-face {
+  font-family: Alankaram;
+  src: url("./alankaram.otf") format("opentype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 720px;
+  height: 1080px;
+  max-width: 720px;
+  max-height: 1080px;
+}
+
+.card {
+  width: 600px;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(56, 0, 85);
+  background-image: url(./bg1.webp);
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+  position: relative;
+}
+
+.content{
+  font-family: Alankaram;
+  width: 85%;
+  height: 90%;
+  /* backdrop-filter: blur(15px); */
+  background-color: rgba(25, 11, 0, 0.8);
+  border-radius: 20px;
+  /* background-color: ; */
+}
+
+.header-title {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.img-plate {
+  height: 200px;
+  width: 180px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(0, 0, 0, .3) 0%,  rgba(203,121,53, .5) 100%), url(./prof.jpeg);
+  border: 4px solid #c97a3a;
+  position: absolute;
+  background-position: center left;
+  background-size: cover;
+  bottom: 20px;
+  left: 20px;
+}
